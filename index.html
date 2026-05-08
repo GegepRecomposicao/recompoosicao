@@ -507,9 +507,9 @@ nav{background:var(--primary);border-bottom:none;padding:0 2rem;display:flex;ali
         </div>
         <div class="alert alert-info" style="margin-bottom:20px">
           📋 As questões variam conforme o ano/série:<br>
-          <strong>1º e 2º ano EF:</strong> 10 questões de Língua Portuguesa e 10 de Matemática &nbsp;·&nbsp;
-          <strong>3º, 4º e 5º ano EF:</strong> 15 questões de Língua Portuguesa e 15 de Matemática &nbsp;·&nbsp;
-          <strong>1ª, 2ª e 3ª Série (EM):</strong> 20 questões de Língua Portuguesa e 20 de Matemática
+          <strong>1º e 2º ano EF:</strong> 10 questões &nbsp;·&nbsp;
+          <strong>3º, 4º e 5º ano EF:</strong> 15 questões &nbsp;·&nbsp;
+          <strong>Demais séries:</strong> 20 questões
         </div>
         <div class="turmas-list" id="turmasGrid">
           <div class="loading-state"><div class="big-spinner"></div><span>Carregando turmas...</span></div>
@@ -1135,24 +1135,10 @@ async function salvarGabarito() {
 // ═══════════════════════════════════════════════════════════
 function getNumQuestoes(serie) {
   if (!serie) return 20;
-  const s = serie.toString().toLowerCase().trim();
-
-  // Ensino Médio (1ª, 2ª, 3ª série) → 20 questões
-  const isEM = s.includes('série') || s.includes('serie') || s.includes(' em') || s.endsWith('em') || s.includes('médio') || s.includes('medio');
-  if (isEM) return 20;
-
-  // 1º e 2º ano do Ensino Fundamental → 10 questões
-  const is1ano = /\b1[ºo°]?\b/.test(s) || s === '1';
-  const is2ano = /\b2[ºo°]?\b/.test(s) || s === '2';
-  if (is1ano || is2ano) return 10;
-
-  // 3º, 4º e 5º ano do Ensino Fundamental → 15 questões
-  const is3ano = /\b3[ºo°]?\b/.test(s) || s === '3';
-  const is4ano = /\b4[ºo°]?\b/.test(s) || s === '4';
-  const is5ano = /\b5[ºo°]?\b/.test(s) || s === '5';
-  if (is3ano || is4ano || is5ano) return 15;
-
-  // Demais (6º ao 9º ano EF e EM sem marcação explícita) → 20 questões
+  const s = serie.toString().toLowerCase();
+  if (s.includes('1') && (s.includes('ano') || s.includes('ef') || s === '1')) return 10;
+  if (s.includes('2') && (s.includes('ano') || s.includes('ef') || s === '2')) return 10;
+  if (['3','4','5'].some(n => s.startsWith(n))) return 15;
   return 20;
 }
 
