@@ -1173,8 +1173,9 @@ function getNumQuestoes(serie) {
   if (!serie) return 20;
   const s = serie.toString().toLowerCase().trim();
 
-  // Detecta Ensino Médio (contém 'médio', 'medio', 'em', ou variações)
-  const isEnsinoMedio = s.includes('médio') || s.includes('medio') || s.includes(' em') || s.startsWith('em ') || s === 'em';
+  // Detecta Ensino Médio: contém 'médio', 'medio', ou contém 'série' mas NÃO contém 'ano'
+  const isEnsinoMedio = s.includes('médio') || s.includes('medio') || s.includes(' em') || s.startsWith('em ') || s === 'em'
+    || (s.includes('série') || s.includes('serie'));
 
   // Ensino Médio: 1ª, 2ª ou 3ª série → sempre 20 questões
   if (isEnsinoMedio) return 20;
@@ -1183,19 +1184,16 @@ function getNumQuestoes(serie) {
   const numMatch = s.match(/\d+/);
   const num = numMatch ? parseInt(numMatch[0]) : null;
 
-  // Detecta explicitamente Ensino Fundamental
-  const isEF = s.includes('fundamental') || s.includes(' ef') || s.startsWith('ef') || s.includes('ano');
-
   // 6º ao 9º ano EF → 20 questões
   if (num !== null && num >= 6 && num <= 9) return 20;
 
-  // 1º e 2º ano EF → 10 questões (apenas se for claramente EF ou não houver contexto de EM)
+  // 1º e 2º ano EF → 10 questões
   if (num === 1 || num === 2) return 10;
 
   // 3º, 4º e 5º ano EF → 15 questões
   if (num === 3 || num === 4 || num === 5) return 15;
 
-  // Qualquer outro caso (EM sem número, série não reconhecida) → 20 questões
+  // Qualquer outro caso → 20 questões
   return 20;
 }
  
