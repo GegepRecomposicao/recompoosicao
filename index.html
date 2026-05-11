@@ -897,6 +897,20 @@ function selectSubject(subj) {
 }
  
 // ═══════════════════════════════════════════════════════════
+//  HELPERS — extração de letra de turma
+// ═══════════════════════════════════════════════════════════
+function extrairLetraTurma(turma) {
+  if (!turma) return '';
+  const match = turma.match(/\b([A-Za-z])\b(?!.*\b[A-Za-z]\b)/);
+  return match ? match[1].toUpperCase() : '';
+}
+
+function exibirTurma(serie, turma) {
+  const letra = extrairLetraTurma(turma);
+  return letra ? `${serie} ${letra}` : serie;
+}
+
+// ═══════════════════════════════════════════════════════════
 //  TURMAS — busca turmas únicas da escola no Supabase
 // ═══════════════════════════════════════════════════════════
 async function carregarTurmas() {
@@ -931,8 +945,9 @@ async function carregarTurmas() {
  
     grid.innerHTML = turmas.map(t => {
       const nq = getNumQuestoes(t.serie);
+      const label = exibirTurma(t.serie, t.turma);
       return `<div class="turma-item" onclick="selectTurma('${esc(t.turma)}','${esc(t.serie)}')">
-        <h3>${t.turma}</h3>
+        <h3>${label}</h3>
         <p>${t.count} aluno(s) · <strong>${nq} questões</strong></p>
       </div>`;
     }).join('');
@@ -948,9 +963,10 @@ async function selectTurma(turmaLabel, serieName) {
   selectedTurma    = turmaLabel;
   selectedTurmaNumQ = getNumQuestoes(serieName);
  
-  document.getElementById('bcTurma').textContent   = turmaLabel;
-  document.getElementById('bcTurma2').textContent  = turmaLabel;
-  document.getElementById('alunosTitulo').textContent = 'Turma ' + turmaLabel + ' — Selecione o aluno';
+  const turmaDisplay = exibirTurma(serieName, turmaLabel);
+  document.getElementById('bcTurma').textContent   = turmaDisplay;
+  document.getElementById('bcTurma2').textContent  = turmaDisplay;
+  document.getElementById('alunosTitulo').textContent = 'Turma ' + turmaDisplay + ' — Selecione o aluno';
   document.getElementById('questoesBadge').textContent = '📝 ' + selectedTurmaNumQ + ' questões';
   document.getElementById('alunoSearch').value = '';
  
