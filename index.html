@@ -235,7 +235,7 @@ nav{background:var(--primary);border-bottom:none;padding:0 2rem;display:flex;ali
 </style>
 </head>
 <body>
-
+ 
 <!-- NAVBAR -->
 <nav id="mainNav">
   <div class="nav-logo" onclick="goPage('home')">
@@ -274,7 +274,7 @@ nav{background:var(--primary);border-bottom:none;padding:0 2rem;display:flex;ali
     </div>
   </div>
 </nav>
-
+ 
 <!-- PAGE: HOME -->
 <div class="page active" id="page-home">
   <div class="hero">
@@ -304,7 +304,7 @@ nav{background:var(--primary);border-bottom:none;padding:0 2rem;display:flex;ali
     <div style="position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#29ABE2 0%,#8DC63F 33%,#F7941D 66%,#ED1C24 100%)"></div>
   </div>
 </div>
-
+ 
 <!-- PAGE: SOBRE -->
 <div class="page" id="page-sobre">
   <div style="background:linear-gradient(150deg,#0f2266,#1B3A8C);color:white;padding:56px 2rem;position:relative;overflow:hidden">
@@ -331,7 +331,7 @@ nav{background:var(--primary);border-bottom:none;padding:0 2rem;display:flex;ali
     </div>
   </div>
 </div>
-
+ 
 <!-- PAGE: MATERIAIS (público) -->
 <div class="page" id="page-materiais">
   <div class="page-header"><div class="page-header-inner"><h1>📚 Materiais Didáticos</h1><p>Recursos pedagógicos para professores e alunos</p></div></div>
@@ -340,7 +340,7 @@ nav{background:var(--primary);border-bottom:none;padding:0 2rem;display:flex;ali
       <button class="tab active" onclick="filterMateriais('todos',this)">Todos</button>
       <button class="tab" onclick="filterMateriais('portugues',this)">Português</button>
       <button class="tab" onclick="filterMateriais('matematica',this)">Matemática</button>
-
+ 
     </div>
     <div class="materiais-grid" id="materiaisGrid">
       <div class="material-card" data-cat="portugues"><div class="material-thumb" style="background:#e0f3fc">📖</div><div class="material-body"><span class="badge badge-blue">Português</span><h3 style="margin-top:8px">Ensino Médio</h3><p>Materiais de Língua Portuguesa para o Ensino Médio</p><a href="https://drive.google.com/drive/folders/1t6FArBP7dzvmVfyqRqRUjMiuf1PAvNX8" target="_blank" class="btn btn-sm btn-green">Acessar</a></div></div>
@@ -352,7 +352,7 @@ nav{background:var(--primary);border-bottom:none;padding:0 2rem;display:flex;ali
     </div>
   </div>
 </div>
-
+ 
 <!-- PAGE: LOGIN -->
 <div class="page" id="page-login">
   <div class="login-wrap">
@@ -389,7 +389,7 @@ nav{background:var(--primary);border-bottom:none;padding:0 2rem;display:flex;ali
     </div>
   </div>
 </div>
-
+ 
 <!-- MODAL: RECUPERAR SENHA -->
 <div class="modal-overlay" id="modalRecuperarSenha">
   <div class="modal" style="max-width:400px">
@@ -409,7 +409,7 @@ nav{background:var(--primary);border-bottom:none;padding:0 2rem;display:flex;ali
     </div>
   </div>
 </div>
-
+ 
 <!-- PAGE: CHAMADO (público) -->
 <div class="page" id="page-chamado">
   <div class="page-header"><div class="page-header-inner"><h1>🎯 Suporte Técnico</h1><p>Abra um chamado e nossa equipe irá te ajudar</p></div></div>
@@ -434,7 +434,7 @@ nav{background:var(--primary);border-bottom:none;padding:0 2rem;display:flex;ali
     </div>
   </div>
 </div>
-
+ 
 <!-- PAGE: DASHBOARD -->
 <div class="page" id="page-dashboard">
   <div class="dash-layout">
@@ -449,7 +449,7 @@ nav{background:var(--primary);border-bottom:none;padding:0 2rem;display:flex;ali
       </div>
     </div>
     <div class="main-content">
-
+ 
       <!-- INÍCIO DO DASHBOARD -->
       <div id="dsec-inicio">
         <div class="dash-welcome">
@@ -479,7 +479,7 @@ nav{background:var(--primary);border-bottom:none;padding:0 2rem;display:flex;ali
           </div>
         </div>
       </div>
-
+ 
       <!-- LANÇAMENTO: placeholder que redireciona -->
       <div id="dsec-lancamento" style="display:none">
         <div class="section-label" style="margin-bottom:12px">Lançar gabarito por disciplina</div>
@@ -488,7 +488,7 @@ nav{background:var(--primary);border-bottom:none;padding:0 2rem;display:flex;ali
           <div class="subject-btn mat" onclick="selectSubject('matematica')"><div class="subj-icon">🔢</div><h3>Matemática</h3><p>Selecionar turma e lançar gabarito</p></div>
         </div>
       </div>
-
+ 
       <!-- LANÇAMENTO: SELEÇÃO DE TURMA -->
       <div id="dsec-turmas" style="display:none">
         <div class="breadcrumb">
@@ -515,7 +515,7 @@ nav{background:var(--primary);border-bottom:none;padding:0 2rem;display:flex;ali
           <div class="loading-state"><div class="big-spinner"></div><span>Carregando turmas...</span></div>
         </div>
       </div>
-
+ 
       <!-- LANÇAMENTO: LISTA DE ALUNOS -->
       <div id="dsec-alunos" style="display:none">
         <div class="breadcrumb">
@@ -550,7 +550,7 @@ nav{background:var(--primary);border-bottom:none;padding:0 2rem;display:flex;ali
           <div id="alunosLoading" style="display:none" class="loading-state"><div class="big-spinner"></div><span>Carregando alunos...</span></div>
         </div>
       </div>
-
+ 
       <!-- LANÇAMENTO: GABARITO -->
       <div id="dsec-gabarito" style="display:none">
         <div class="breadcrumb">
@@ -579,7 +579,7 @@ nav{background:var(--primary);border-bottom:none;padding:0 2rem;display:flex;ali
           <button class="btn btn-green btn-lg" id="btnSalvarGab" onclick="salvarGabarito()">💾 Salvar gabarito</button>
         </div>
       </div>
-
+ 
       <!-- CALENDÁRIO -->
       <div id="dsec-calendario" style="display:none">
         <div style="display:grid;grid-template-columns:1fr 300px;gap:24px">
@@ -598,7 +598,7 @@ nav{background:var(--primary);border-bottom:none;padding:0 2rem;display:flex;ali
           </div>
         </div>
       </div>
-
+ 
       <!-- MATERIAIS (dashboard) -->
       <div id="dsec-materiais2" style="display:none">
         <h2 style="font-size:20px;font-weight:700;margin-bottom:20px">📚 Materiais Didáticos</h2>
@@ -613,7 +613,7 @@ nav{background:var(--primary);border-bottom:none;padding:0 2rem;display:flex;ali
           <div class="material-card"><div class="material-thumb" style="background:#f0fdf4">✍️</div><div class="material-body"><span class="badge badge-blue">Português</span><h3 style="margin-top:8px">Produção Textual</h3><p>Guia para escrita criativa EF II</p><button class="btn btn-sm btn-green">Baixar</button></div></div>
         </div>
       </div>
-
+ 
       <!-- SUPORTE (dashboard) -->
       <div id="dsec-chamado2" style="display:none">
         <h2 style="font-size:20px;font-weight:700;margin-bottom:20px">🎯 Suporte Técnico</h2>
@@ -638,11 +638,11 @@ nav{background:var(--primary);border-bottom:none;padding:0 2rem;display:flex;ali
           </div>
         </div>
       </div>
-
+ 
     </div><!-- /main-content -->
   </div><!-- /dash-layout -->
 </div>
-
+ 
 <!-- MODAL EVENTO -->
 <div class="modal-overlay" id="modalEvento">
   <div class="modal">
@@ -658,10 +658,10 @@ nav{background:var(--primary);border-bottom:none;padding:0 2rem;display:flex;ali
     </div>
   </div>
 </div>
-
+ 
 <!-- TOAST -->
 <div class="toast" id="toast"></div>
-
+ 
 <script>
 // ═══════════════════════════════════════════════════════════
 //  SUPABASE — configuração
@@ -669,7 +669,7 @@ nav{background:var(--primary);border-bottom:none;padding:0 2rem;display:flex;ali
 const SUPABASE_URL = 'https://adwbrwsnlskzvgekmhrf.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFkd2Jyd3NubHNrenZnZWttaHJmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc5ODI2MTQsImV4cCI6MjA5MzU1ODYxNH0.yUHmN9qAdnL8UdX9YdisE_bCIEsQGiqD5g3u0-Rqgs8';
 const db = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-
+ 
 // ═══════════════════════════════════════════════════════════
 //  ESTADO GLOBAL
 // ═══════════════════════════════════════════════════════════
@@ -686,20 +686,20 @@ let _searchTimer = null;
 let calMonth = new Date().getMonth();
 let calYear  = new Date().getFullYear();
 let eventos  = [];
-
+ 
 // ═══════════════════════════════════════════════════════════
 //  INICIALIZAÇÃO
 // ═══════════════════════════════════════════════════════════
 document.addEventListener('DOMContentLoaded', async () => {
   await carregarStatsHome();
   renderCalendario();
-
+ 
   // Restaura sessão ativa (ao recarregar a página)
   const { data: { session } } = await db.auth.getSession();
   if (session) {
     await carregarEscolaDoUsuario(session.user.email);
   }
-
+ 
   // Ouve mudanças de autenticação (login/logout)
   db.auth.onAuthStateChange(async (event, session) => {
     if (event === 'SIGNED_IN' && session) {
@@ -709,7 +709,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   });
 });
-
+ 
 // ═══════════════════════════════════════════════════════════
 //  STATS DA HOME (contagens reais)
 // ═══════════════════════════════════════════════════════════
@@ -725,7 +725,7 @@ async function carregarStatsHome() {
     document.getElementById('statRespostas').textContent = cRes  ? cRes.toLocaleString('pt-BR')  : '—';
   } catch(e) { console.warn('Stats:', e); }
 }
-
+ 
 // ═══════════════════════════════════════════════════════════
 //  LOGIN — Supabase Auth (email + senha)
 // ═══════════════════════════════════════════════════════════
@@ -733,25 +733,25 @@ function toggleSenha() {
   const inp = document.getElementById('loginPass');
   inp.type = inp.type === 'password' ? 'text' : 'password';
 }
-
+ 
 function showLoginError(msg) {
   const el = document.getElementById('login-error');
   el.textContent = msg;
   el.style.display = 'block';
 }
-
+ 
 async function doLogin() {
   const email = document.getElementById('loginEmail').value.trim();
   const senha = document.getElementById('loginPass').value;
   const btn   = document.getElementById('loginBtn');
-
+ 
   document.getElementById('login-error').style.display = 'none';
   if (!email) { showLoginError('Informe o e-mail.'); return; }
   if (!senha) { showLoginError('Informe a senha.'); return; }
-
+ 
   btn.disabled = true;
   btn.innerHTML = '<span class="spinner"></span>Entrando...';
-
+ 
   try {
     const { data, error } = await db.auth.signInWithPassword({ email, password: senha });
     if (error) throw error;
@@ -767,21 +767,21 @@ async function doLogin() {
     btn.innerHTML = 'Entrar no sistema';
   }
 }
-
+ 
 // Busca a escola pelo codigo_inep extraído do email do Auth
 // Padrão: 25001302@see.pb.gov.br → codigo_inep = "25001302"
 async function carregarEscolaDoUsuario(email) {
   try {
     const codigoInep = email.split('@')[0];
-
+ 
     const { data, error } = await db
       .from('escolas')
       .select('*')
       .eq('codigo_inep', codigoInep)
       .maybeSingle();
-
+ 
     if (error) throw error;
-
+ 
     if (!data) {
       showLoginError('Escola não encontrada (INEP: ' + codigoInep + '). Contate o suporte.');
       await db.auth.signOut();
@@ -789,7 +789,7 @@ async function carregarEscolaDoUsuario(email) {
       document.getElementById('loginBtn').innerHTML = 'Entrar no sistema';
       return;
     }
-
+ 
     currentEscola = data;
     entrarNoDashboard();
   } catch(e) {
@@ -797,7 +797,7 @@ async function carregarEscolaDoUsuario(email) {
     await db.auth.signOut();
   }
 }
-
+ 
 // Recuperação de senha
 function abrirRecuperarSenha() {
   const emailLogin = document.getElementById('loginEmail').value;
@@ -805,24 +805,24 @@ function abrirRecuperarSenha() {
   document.getElementById('recuperar-msg').style.display = 'none';
   document.getElementById('modalRecuperarSenha').classList.add('open');
 }
-
+ 
 async function enviarRecuperacao() {
   const email = document.getElementById('recuperarEmail').value.trim();
   const msg   = document.getElementById('recuperar-msg');
   const btn   = document.getElementById('btnRecuperar');
-
+ 
   if (!email) { msg.textContent='Informe o e-mail.'; msg.style.cssText='display:block;color:var(--danger);font-size:13px;margin-bottom:12px'; return; }
-
+ 
   btn.disabled = true;
   btn.textContent = 'Enviando...';
-
+ 
   const { error } = await db.auth.resetPasswordForEmail(email, {
     redirectTo: window.location.origin + window.location.pathname,
   });
-
+ 
   btn.disabled = false;
   btn.textContent = 'Enviar link';
-
+ 
   if (error) {
     msg.textContent = 'Erro: ' + error.message;
     msg.style.cssText = 'display:block;color:var(--danger);font-size:13px;margin-bottom:12px';
@@ -832,7 +832,7 @@ async function enviarRecuperacao() {
     setTimeout(() => closeModal('modalRecuperarSenha'), 3000);
   }
 }
-
+ 
 // ═══════════════════════════════════════════════════════════
 //  DASHBOARD — inicializa após login
 // ═══════════════════════════════════════════════════════════
@@ -842,44 +842,44 @@ async function entrarNoDashboard() {
   document.getElementById('navActions').style.display   = 'none';
   document.getElementById('dashNav').style.display      = 'flex';
   document.getElementById('userBarWrap').style.display  = 'block';
-
+ 
   const nome = currentEscola.nome || 'Escola';
   const ini  = nome.split(' ').slice(0,2).map(w=>w[0]).join('').toUpperCase();
-
+ 
   document.getElementById('userInitials').textContent = ini;
   document.getElementById('userName').textContent     = nome;
   document.getElementById('userRole').textContent     = currentEscola.gre || 'Professor';
   document.getElementById('dashAvatar').textContent   = ini;
-
+ 
   const hr = new Date().getHours();
   const saudacao = hr < 12 ? 'Bom dia' : hr < 18 ? 'Boa tarde' : 'Boa noite';
   document.getElementById('dashGreet').textContent = `${saudacao}!`;
   document.getElementById('dashSub').textContent   = `${currentEscola.municipio || ''} · ${currentEscola.gre || ''}`;
   document.getElementById('dashEscola').textContent = nome.length > 20 ? nome.substring(0,18)+'…' : nome;
-
+ 
   await carregarDashStats();
 }
-
+ 
 async function carregarDashStats() {
   try {
     const [{ count: cAlu }, { count: cGab }] = await Promise.all([
       db.from('alunos').select('*',{count:'exact',head:true}).eq('escola_id', currentEscola.id),
       db.from('respostas').select('*',{count:'exact',head:true}).eq('escola_id', currentEscola.id),
     ]);
-
+ 
     // Contar turmas únicas
     const { data: turmasData } = await db
       .from('alunos')
       .select('turma')
       .eq('escola_id', currentEscola.id);
     const turmasUnicas = new Set((turmasData||[]).map(a => a.turma).filter(Boolean)).size;
-
+ 
     document.getElementById('dashTurmas').textContent   = turmasUnicas || 0;
     document.getElementById('dashAlunos').textContent   = cAlu || 0;
     document.getElementById('dashGabaritos').textContent = cGab || 0;
   } catch(e) { console.warn('DashStats:', e); }
 }
-
+ 
 // ═══════════════════════════════════════════════════════════
 //  LANÇAMENTO — seleciona disciplina e vai para turmas
 // ═══════════════════════════════════════════════════════════
@@ -894,23 +894,23 @@ function selectSubject(subj) {
   showDashSection('turmas');
   carregarTurmas();
 }
-
+ 
 // ═══════════════════════════════════════════════════════════
 //  TURMAS — busca turmas únicas da escola no Supabase
 // ═══════════════════════════════════════════════════════════
 async function carregarTurmas() {
   const grid = document.getElementById('turmasGrid');
   grid.innerHTML = '<div class="loading-state"><div class="big-spinner"></div><span>Carregando turmas...</span></div>';
-
+ 
   try {
     const { data, error } = await db
       .from('alunos')
       .select('turma, serie')
       .eq('escola_id', currentEscola.id)
       .not('turma', 'is', null);
-
+ 
     if (error) throw error;
-
+ 
     // Agrupa por turma
     const map = {};
     data.forEach(a => {
@@ -918,16 +918,16 @@ async function carregarTurmas() {
       if (!map[key]) map[key] = { turma: a.turma, serie: a.serie || a.turma, count: 0 };
       map[key].count++;
     });
-
+ 
     const turmas = Object.values(map).sort((a,b) =>
       a.turma.localeCompare(b.turma, undefined, { numeric: true })
     );
-
+ 
     if (!turmas.length) {
       grid.innerHTML = '<p style="color:var(--text-muted);padding:20px">Nenhuma turma encontrada para esta escola.</p>';
       return;
     }
-
+ 
     grid.innerHTML = turmas.map(t => {
       const nq = getNumQuestoes(t.serie);
       return `<div class="turma-item" onclick="selectTurma('${esc(t.turma)}','${esc(t.serie)}')">
@@ -939,29 +939,29 @@ async function carregarTurmas() {
     grid.innerHTML = `<div class="alert alert-warning">Erro ao carregar turmas: ${e.message}</div>`;
   }
 }
-
+ 
 // ═══════════════════════════════════════════════════════════
 //  ALUNOS — busca alunos da turma selecionada
 // ═══════════════════════════════════════════════════════════
 async function selectTurma(turmaLabel, serieName) {
   selectedTurma    = turmaLabel;
   selectedTurmaNumQ = getNumQuestoes(serieName);
-
+ 
   document.getElementById('bcTurma').textContent   = turmaLabel;
   document.getElementById('bcTurma2').textContent  = turmaLabel;
   document.getElementById('alunosTitulo').textContent = 'Turma ' + turmaLabel + ' — Selecione o aluno';
   document.getElementById('questoesBadge').textContent = '📝 ' + selectedTurmaNumQ + ' questões';
   document.getElementById('alunoSearch').value = '';
-
+ 
   showDashSection('alunos');
-
+ 
   const tbody    = document.getElementById('alunosBuscaTbody');
   const loadEl   = document.getElementById('alunosLoading');
   const emptyEl  = document.getElementById('alunosEmpty');
   tbody.innerHTML = '';
   emptyEl.style.display = 'none';
   loadEl.style.display  = 'flex';
-
+ 
   try {
     const { data, error } = await db
       .from('alunos')
@@ -969,9 +969,9 @@ async function selectTurma(turmaLabel, serieName) {
       .eq('escola_id', currentEscola.id)
       .eq('turma', turmaLabel)
       .order('nome');
-
+ 
     if (error) throw error;
-
+ 
     _alunosTurma = data || [];
     _searchIndexTurma = _alunosTurma.map(a => (a.nome + ' ' + a.matricula).toLowerCase());
     loadEl.style.display = 'none';
@@ -981,29 +981,29 @@ async function selectTurma(turmaLabel, serieName) {
     tbody.innerHTML = `<tr><td colspan="5" style="padding:20px;color:var(--danger)">Erro: ${e.message}</td></tr>`;
   }
 }
-
+ 
 function filtrarAlunos() {
   clearTimeout(_searchTimer);
   _searchTimer = setTimeout(() => renderAlunosTurma(document.getElementById('alunoSearch').value), 150);
 }
-
+ 
 function renderAlunosTurma(q) {
   const term  = (q || '').toLowerCase().trim();
   const lista = term
     ? _alunosTurma.filter((_,i) => _searchIndexTurma[i].includes(term))
     : _alunosTurma;
-
+ 
   const tbody   = document.getElementById('alunosBuscaTbody');
   const emptyEl = document.getElementById('alunosEmpty');
   const countEl = document.getElementById('alunoCount');
-
+ 
   countEl.textContent = lista.length === _alunosTurma.length
     ? `${_alunosTurma.length} aluno(s)`
     : `${lista.length} de ${_alunosTurma.length} aluno(s)`;
-
+ 
   if (!lista.length) { tbody.innerHTML = ''; emptyEl.style.display = 'block'; return; }
   emptyEl.style.display = 'none';
-
+ 
   tbody.innerHTML = lista.map(a => {
     const key  = selectedSubject + '_' + a.id;
     const done = savedGabs[key];
@@ -1020,13 +1020,13 @@ function renderAlunosTurma(q) {
     </tr>`;
   }).join('');
 }
-
+ 
 // ═══════════════════════════════════════════════════════════
 //  GABARITO — abre tela de resposta para um aluno
 // ═══════════════════════════════════════════════════════════
 async function selectAluno(id, nome, matricula, serie, turma) {
   selectedAluno = { id, nome, matricula, serie, turma };
-
+ 
   const key = selectedSubject + '_' + id;
   // Se já temos no cache local, usa; senão, busca no Supabase
   if (savedGabs[key]) {
@@ -1047,19 +1047,19 @@ async function selectAluno(id, nome, matricula, serie, turma) {
       }
     } catch(e) { console.warn('Busca gabarito:', e); }
   }
-
+ 
   const firstName = nome.split(' ').slice(0,2).join(' ');
   const disc = selectedSubject === 'portugues' ? 'Língua Portuguesa' : 'Matemática';
-
+ 
   document.getElementById('bcAluno').textContent      = firstName;
   document.getElementById('gabaritoTitle').textContent = 'Gabarito — ' + nome;
   document.getElementById('gabaritoSub').textContent  =
     `${disc} · Turma ${selectedTurma} · Mat. ${matricula || '—'} · ${selectedTurmaNumQ} questões`;
-
+ 
   renderGabarito();
   showDashSection('gabarito');
 }
-
+ 
 function renderGabarito() {
   const nq   = selectedTurmaNumQ || 10;
   const grid = document.getElementById('gabaritoGrid');
@@ -1075,19 +1075,19 @@ function renderGabarito() {
       </div>
     </div>`;
   }).join('');
-
+ 
   const filled = Object.keys(gabaritoAnswers).filter(k => parseInt(k) <= nq).length;
   document.getElementById('gabaritoProgress').textContent = `${filled} / ${nq} respondidas`;
 }
-
+ 
 function selectAlt(q, alt) {
   if (gabaritoAnswers[q] === alt) delete gabaritoAnswers[q];
   else gabaritoAnswers[q] = alt;
   renderGabarito();
 }
-
+ 
 function limparGabarito() { gabaritoAnswers = {}; renderGabarito(); }
-
+ 
 // ═══════════════════════════════════════════════════════════
 //  SALVAR GABARITO — upsert no Supabase (tabela respostas)
 // ═══════════════════════════════════════════════════════════
@@ -1095,7 +1095,7 @@ async function salvarGabarito() {
   const btn = document.getElementById('btnSalvarGab');
   btn.disabled = true;
   btn.innerHTML = '<span class="spinner"></span>Salvando...';
-
+ 
   try {
     const { error } = await db
       .from('respostas')
@@ -1108,13 +1108,13 @@ async function salvarGabarito() {
       }, {
         onConflict: 'aluno_id,escola_id,disciplina'  // ajuste se necessário
       });
-
+ 
     if (error) throw error;
-
+ 
     // Atualiza cache local
     const key = selectedSubject + '_' + selectedAluno.id;
     savedGabs[key] = { ...gabaritoAnswers };
-
+ 
     showToast('✅ Gabarito salvo com sucesso!');
     await carregarDashStats();
     setTimeout(() => {
@@ -1129,23 +1129,46 @@ async function salvarGabarito() {
     btn.innerHTML = '💾 Salvar gabarito';
   }
 }
-
+ 
 // ═══════════════════════════════════════════════════════════
 //  HELPERS
 // ═══════════════════════════════════════════════════════════
 function getNumQuestoes(serie) {
   if (!serie) return 20;
-  const s = serie.toString().toLowerCase();
-  if (s.includes('1') && (s.includes('ano') || s.includes('ef') || s === '1')) return 10;
-  if (s.includes('2') && (s.includes('ano') || s.includes('ef') || s === '2')) return 10;
-  if (['3','4','5'].some(n => s.startsWith(n))) return 15;
+  const s = serie.toString().toLowerCase().trim();
+ 
+  // Detecta se é Ensino Médio (contém 'em', 'médio', 'medio', ou variações como '1ª serie', '1 serie' sem 'ef'/'ano'/'fundamental')
+  const isEnsinoMedio = s.includes('médio') || s.includes('medio') || s.includes(' em') || s.startsWith('em ') || s === 'em';
+ 
+  // Verifica o número da série/ano (extrai o primeiro dígito encontrado)
+  const numMatch = s.match(/\d+/);
+  const num = numMatch ? parseInt(numMatch[0]) : null;
+ 
+  // Ensino Médio: 1ª, 2ª ou 3ª série → 20 questões
+  if (isEnsinoMedio) return 20;
+ 
+  // Verifica explicitamente se é Ensino Fundamental
+  const isEF = s.includes('fundamental') || s.includes(' ef') || s.startsWith('ef') || s.includes('ano');
+ 
+  if (num === 1 || num === 2) {
+    // 1º e 2º ano EF → 10 questões
+    // Se não houver indicação clara de EM, assume EF
+    return 10;
+  }
+ 
+  if (num === 3 || num === 4 || num === 5) {
+    // 3º, 4º e 5º ano EF → 15 questões
+    return 15;
+  }
+ 
+  // 6º ao 9º ano EF ou qualquer série do EM (6, 7, 8, 9 ou ≥1 sem contexto) → 20 questões
   return 20;
 }
-
+ 
 function esc(str) {
   return String(str || '').replace(/'/g, "\\'").replace(/"/g, '&quot;');
 }
-
+ 
 // ═══════════════════════════════════════════════════════════
 //  NAVEGAÇÃO DE PÁGINAS
 // ═══════════════════════════════════════════════════════════
@@ -1154,7 +1177,7 @@ function goPage(id) {
   document.getElementById('page-' + id).classList.add('active');
   window.scrollTo(0, 0);
 }
-
+ 
 function showDashSection(sec) {
   document.querySelectorAll('[id^="dsec-"]').forEach(el => el.style.display = 'none');
   const el = document.getElementById('dsec-' + sec);
@@ -1169,7 +1192,7 @@ function showDashSection(sec) {
   });
   if (sec === 'calendario') renderCalendario();
 }
-
+ 
 async function logout() {
   await db.auth.signOut();
   currentEscola = null;
@@ -1185,7 +1208,7 @@ async function logout() {
   document.getElementById('login-error').style.display = 'none';
   goPage('home');
 }
-
+ 
 // ═══════════════════════════════════════════════════════════
 //  CALENDÁRIO
 // ═══════════════════════════════════════════════════════════
@@ -1233,7 +1256,7 @@ function addEvento() {
   renderCalendario();
   showToast('📅 Evento adicionado!');
 }
-
+ 
 // ═══════════════════════════════════════════════════════════
 //  OUTROS
 // ═══════════════════════════════════════════════════════════
@@ -1243,7 +1266,7 @@ function filterMateriais(cat, btn) {
     c.style.display = (cat==='todos' || !c.dataset.cat || c.dataset.cat===cat) ? '' : 'none';
   });
 }
-
+ 
 function selectChamado(el) {
   document.querySelectorAll('.chamado-type').forEach(c=>c.classList.remove('selected'));
   el.classList.add('selected');
@@ -1256,11 +1279,11 @@ function enviarChamado() {
   const mensagem  = document.getElementById('chamadoMensagem')?.value.trim();
   const errorEl   = document.getElementById('chamado-error');
   const btn       = document.getElementById('btnEnviarChamado');
-
+ 
   // Tipo selecionado
   const tipoEl = document.querySelector('#page-chamado .chamado-type.selected p');
   const tipo   = tipoEl ? tipoEl.textContent : 'Não informado';
-
+ 
   // Validação
   if (!nome || !email || !mensagem) {
     errorEl.textContent = 'Preencha nome, e-mail e descrição do problema.';
@@ -1268,10 +1291,10 @@ function enviarChamado() {
     return;
   }
   errorEl.style.display = 'none';
-
+ 
   btn.disabled = true;
   btn.innerHTML = '<span class="spinner"></span>Enviando...';
-
+ 
   emailjs.send('service_3wsy3pk', 'template_fl8ck7e', {
     nome,
     email,
@@ -1299,20 +1322,20 @@ function enviarChamado() {
     btn.innerHTML = 'Enviar chamado';
   });
 }
-
+ 
 function enviarChamadoDash() {
   const mensagem  = document.getElementById('chamadoMensagem2')?.value.trim();
   const prioridade= document.getElementById('chamadoPrioridade2')?.value;
   const tipoEl    = document.querySelector('#dsec-chamado2 .chamado-type.selected p');
   const tipo      = tipoEl ? tipoEl.textContent : 'Não informado';
-
+ 
   // Dados do usuário logado
   const nome  = document.getElementById('userName')?.textContent || 'Usuário logado';
   const email = document.getElementById('userRole')?.textContent  || '';
   const escola= document.getElementById('dashEscola')?.textContent || '';
-
+ 
   if (!mensagem) { showToast('❌ Descreva o problema antes de enviar.', true); return; }
-
+ 
   emailjs.send('service_3wsy3pk', 'template_fl8ck7e', {
     nome,
     email,
@@ -1327,7 +1350,7 @@ function enviarChamadoDash() {
     showToast('❌ Erro ao enviar: ' + (err?.text || JSON.stringify(err)), true);
   });
 }
-
+ 
 function showToast(msg, isError=false) {
   const t = document.getElementById('toast');
   t.textContent = msg;
