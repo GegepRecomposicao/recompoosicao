@@ -510,7 +510,7 @@ nav{background:var(--primary);border-bottom:none;padding:0 2rem;display:flex;ali
           📋 As questões variam conforme o ano/série:<br>
           <strong>1º e 2º ano EF:</strong> 10 questões &nbsp;·&nbsp;
           <strong>3º, 4º e 5º ano EF:</strong> 15 questões &nbsp;·&nbsp;
-          <strong>Demais séries:</strong> 20 questões
+          <strong>6º ao 9º ano EF e 1ª, 2ª e 3ª série EM:</strong> 20 questões
         </div>
         <div class="turmas-list" id="turmasGrid">
           <div class="loading-state"><div class="big-spinner"></div><span>Carregando turmas...</span></div>
@@ -1172,32 +1172,30 @@ async function salvarGabarito() {
 function getNumQuestoes(serie) {
   if (!serie) return 20;
   const s = serie.toString().toLowerCase().trim();
- 
-  // Detecta se é Ensino Médio (contém 'em', 'médio', 'medio', ou variações como '1ª serie', '1 serie' sem 'ef'/'ano'/'fundamental')
+
+  // Detecta Ensino Médio (contém 'médio', 'medio', 'em', ou variações)
   const isEnsinoMedio = s.includes('médio') || s.includes('medio') || s.includes(' em') || s.startsWith('em ') || s === 'em';
- 
+
+  // Ensino Médio: 1ª, 2ª ou 3ª série → sempre 20 questões
+  if (isEnsinoMedio) return 20;
+
   // Verifica o número da série/ano (extrai o primeiro dígito encontrado)
   const numMatch = s.match(/\d+/);
   const num = numMatch ? parseInt(numMatch[0]) : null;
- 
-  // Ensino Médio: 1ª, 2ª ou 3ª série → 20 questões
-  if (isEnsinoMedio) return 20;
- 
-  // Verifica explicitamente se é Ensino Fundamental
+
+  // Detecta explicitamente Ensino Fundamental
   const isEF = s.includes('fundamental') || s.includes(' ef') || s.startsWith('ef') || s.includes('ano');
- 
-  if (num === 1 || num === 2) {
-    // 1º e 2º ano EF → 10 questões
-    // Se não houver indicação clara de EM, assume EF
-    return 10;
-  }
- 
-  if (num === 3 || num === 4 || num === 5) {
-    // 3º, 4º e 5º ano EF → 15 questões
-    return 15;
-  }
- 
-  // 6º ao 9º ano EF ou qualquer série do EM (6, 7, 8, 9 ou ≥1 sem contexto) → 20 questões
+
+  // 6º ao 9º ano EF → 20 questões
+  if (num !== null && num >= 6 && num <= 9) return 20;
+
+  // 1º e 2º ano EF → 10 questões (apenas se for claramente EF ou não houver contexto de EM)
+  if (num === 1 || num === 2) return 10;
+
+  // 3º, 4º e 5º ano EF → 15 questões
+  if (num === 3 || num === 4 || num === 5) return 15;
+
+  // Qualquer outro caso (EM sem número, série não reconhecida) → 20 questões
   return 20;
 }
  
